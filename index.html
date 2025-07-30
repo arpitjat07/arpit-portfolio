@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
     <!-- Navigation -->
     <nav>
         <div class="container">
@@ -16,19 +23,37 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#learning">Learning</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#learning">Learning</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="particles" id="particles"></div>
         <div class="container">
             <h1>Arpit Jat</h1>
-            <p class="subtitle">Data Science & Machine Learning Enthusiast</p>
-            <p class="description">BTech AI Student | Problem Solver | Future Data Scientist</p>
+            <p class="subtitle" id="typewriter"></p>
             <a href="#contact" class="cta-button">Get In Touch</a>
         </div>
     </section>
@@ -44,9 +69,14 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <p>Hello! I'm Arpit Jat, a passionate Computer Science student specializing in Artificial Intelligence at Poornima College of Engineering. Currently pursuing my BTech degree (2024-2028), I'm deeply fascinated by the world of Data Science and Machine Learning.</p>
-                    <p>My journey in technology is driven by curiosity and the desire to solve real-world problems using data-driven approaches. I'm constantly learning and expanding my skill set in programming, algorithms, and emerging AI technologies.</p>
-                    <p>As I progress through my academic journey, I'm eager to apply my knowledge to meaningful projects and contribute to the exciting field of artificial intelligence and data science.</p>
+                    <p>Hello! I'm Arpit Jat, a passionate Computer Science student specializing in Artificial
+                        Intelligence at Poornima College of Engineering. Currently pursuing my BTech degree (2024-2028),
+                        I'm deeply fascinated by the world of Data Science and Machine Learning.</p>
+                    <p>My journey in technology is driven by curiosity and the desire to solve real-world problems using
+                        data-driven approaches. I'm constantly learning and expanding my skill set in programming,
+                        algorithms, and emerging AI technologies.</p>
+                    <p>As I progress through my academic journey, I'm eager to apply my knowledge to meaningful projects
+                        and contribute to the exciting field of artificial intelligence and data science.</p>
                 </div>
             </div>
         </div>
@@ -61,39 +91,80 @@
                     <i class="fas fa-code"></i>
                     <h3>Programming Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C/C++</span>
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-category">
                     <i class="fas fa-brain"></i>
                     <h3>Data Science & ML</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">scikit-learn</span>
                         <span class="skill-tag">Machine Learning</span>
                         <span class="skill-tag">Statistical Analysis</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-category">
-                    <i class="fas fa-database"></i>
-                    <h3>Database & Systems</h3>
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools & Frameworks</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">SQL</span>
                         <span class="skill-tag">DBMS</span>
-                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">DSA</span>
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Git</span>
+
+
                     </div>
                 </div>
-                
+
                 <div class="skill-category">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <h3>Problem Solving</h3>
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Soft Skills</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">DSA</span>
-                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Team Management</span>
+                        <span class="skill-tag">Communication</span>
                         <span class="skill-tag">Logical Thinking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currently Learning Section -->
+    <section id="learning" class="currently-learning">
+        <div class="container">
+            <div class="learning-content">
+                <h2 class="section-title">Currently Learning</h2>
+                <p>Continuously expanding my knowledge in cutting-edge technologies</p>
+                <div class="learning-items">
+                    <div class="learning-item">
+                        <i class="fas fa-robot"></i>
+                        <h4>Deep Learning</h4>
+                        <p>Neural networks, TensorFlow, and advanced AI models</p>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Advanced Analytics</h4>
+                        <p>Time series analysis, predictive modeling</p>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-comments"></i>
+                        <h4>Natural Language Processing</h4>
+                        <p>Text analysis, sentiment analysis, language models</p>
+                    </div>
+                    <div class="learning-item">
+                        <i class="fas fa-eye"></i>
+                        <h4>Computer Vision</h4>
+                        <p>OpenCV, image processing, and recognition systems</p>
                     </div>
                 </div>
             </div>
@@ -108,7 +179,9 @@
                 <h3>Bachelor of Technology in Artificial Intelligence</h3>
                 <p class="institution">Poornima College of Engineering</p>
                 <p class="duration">2024 - 2028</p>
-                <p>Currently pursuing BTech in AI, focusing on machine learning, data science, algorithms, and artificial intelligence applications. Building a strong foundation in mathematics, programming, and computational thinking.</p>
+                <p>Currently pursuing BTech in AI, focusing on machine learning, data science, algorithms, and
+                    artificial intelligence applications. Building a strong foundation in mathematics, programming, and
+                    computational thinking.</p>
             </div>
         </div>
     </section>
@@ -120,7 +193,9 @@
             <div class="coming-soon">
                 <i class="fas fa-rocket"></i>
                 <h3>Exciting Projects Coming Soon!</h3>
-                <p>I'm currently working on several data science and machine learning projects that will showcase my skills and passion for AI. Check back soon to see my latest work in action, including data analysis, predictive modeling, and innovative AI solutions.</p>
+                <p>I'm currently working on several data science and machine learning projects that will showcase my
+                    skills and passion for AI. Check back soon to see my latest work in action, including data analysis,
+                    predictive modeling, and innovative AI solutions.</p>
             </div>
         </div>
     </section>
@@ -158,7 +233,7 @@
                         <a href="https://github.com/arpitjat07" target="_blank">github.com/arpitjat07</a>
                     </div>
                 </div>
-                 <div class="contact-item">
+                <div class="contact-item">
                     <i class="fas fa-code"></i>
                     <div>
                         <h4>LeetCode</h4>
@@ -183,4 +258,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
