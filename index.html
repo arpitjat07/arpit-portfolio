@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arpit Jat - Data Science & Machine Learning</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
+
+
 </head>
 
 <body>
@@ -15,10 +17,12 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation - Updated Layout -->
     <nav>
         <div class="container">
-            <div class="logo">Arpit Jat</div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -30,9 +34,6 @@
             </ul>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
                 <i class="fas fa-bars"></i>
-            </button>
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
             </button>
             <div class="mobile-menu" id="mobileMenu">
                 <ul>
@@ -93,23 +94,15 @@
                     <i class="fas fa-code"></i>
                     <h3>Programming Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">C Programming</span>
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Html</span>
+                        <span class="skill-tag">Css</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <i class="fas fa-brain"></i>
-                    <h3>Data Science & ML</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">scikit-learn</span>
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Statistical Analysis</span>
-                    </div>
-                </div>
+            
 
                 <div class="skill-category">
                     <i class="fas fa-tools"></i>
@@ -117,9 +110,9 @@
                     <div class="skill-tags">
                         <span class="skill-tag">DBMS</span>
                         <span class="skill-tag">DSA</span>
-                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">Flask</span>
                         <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
 
 
                     </div>
@@ -161,11 +154,6 @@
                         <h4>Natural Language Processing</h4>
                         <p>Text analysis, sentiment analysis, language models</p>
                     </div>
-                    <div class="learning-item">
-                        <i class="fas fa-eye"></i>
-                        <h4>Computer Vision</h4>
-                        <p>OpenCV, image processing, and recognition systems</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -176,15 +164,26 @@
         <div class="container">
             <h2 class="section-title">Education</h2>
             <div class="education-card">
-                <h3>Bachelor of Technology in Artificial Intelligence</h3>
+                <h3>Bachelor of Technology - Artificial Intelligence</h3>
                 <p class="institution">Poornima College of Engineering</p>
                 <p class="duration">2024 - 2028</p>
+                <p class="duration">CGPA - 7.53</p>
                 <p>Currently pursuing BTech in AI, focusing on machine learning, data science, algorithms, and
                     artificial intelligence applications. Building a strong foundation in mathematics, programming, and
                     computational thinking.</p>
             </div>
+              <div class="education-card">
+                <h3>High School - Science</h3>
+                <p class="institution">DAV HZL Sr Sec School</p>
+                <p class="duration">2023 - 2024</p>
+                <p class="duration">Percentage - 71.4%</p>
+                <p>Completed 12th grade under the CBSE board with Physics, Chemistry, and Mathematics.
+                    Gained a solid foundation in core science subjects, which guided me toward pursuing engineering.</p>
+            </div>
         </div>
     </section>
+
+    
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
@@ -212,13 +211,7 @@
                         <a href="mailto:arpitjat1903@gmail.com">arpitjat1903@gmail.com</a>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Phone</h4>
-                        <a href="tel:+917877095436">+91 7877095436</a>
-                    </div>
-                </div>
+              
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
                     <div>
@@ -237,7 +230,7 @@
                     <i class="fas fa-code"></i>
                     <div>
                         <h4>LeetCode</h4>
-                        <a href="https://leetcode.com/u/arpitjat07/" target="_blank">leetcode.com/u/arpitjat07/</a>
+                        <a href="https://leetcode.com/u/Obux15uf4h/" target="_blank">leetcode.com/u/Obux15uf4h/</a>
                     </div>
                 </div>
             </div>
@@ -250,14 +243,14 @@
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/arpit-jat/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/arpitjat07" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:arpitjat1903@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:arpitjat1903@gmail.com"  target="_blank"><i class="fas fa-envelope"></i></a>
             </div>
             <p>&copy; 2025 Arpit Jat. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
-
