@@ -1,180 +1,93 @@
-       // Loading screen
-        window.addEventListener('load', function () {
-            const loadingScreen = document.getElementById('loadingScreen');
-            setTimeout(() => {
-                loadingScreen.classList.add('fade-out');
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 500);
-            }, 1000);
-        });
-
-        // Create moving particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 250;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-
-                // Random starting position
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 8 + 's';
-                particle.style.animationDuration = (Math.random() * 6 + 6) + 's';
-
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        // Initialize particles after loading
+// Loading screen
+window.addEventListener('load', function () {
+    const loadingScreen = document.getElementById('loadingScreen');
+    setTimeout(() => {
+        loadingScreen.classList.add('fade-out');
         setTimeout(() => {
-            createParticles();
-        }, 1500);
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 1000);
+});
 
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
-        const body = document.body;
 
-        // Check for saved theme preference or default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        if (currentTheme === 'dark') {
-            body.classList.add('dark-theme');
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuIcon = mobileMenuToggle.querySelector('i');
+
+mobileMenuToggle.addEventListener('click', function () {
+    mobileMenu.classList.toggle('active');
+    if (mobileMenu.classList.contains('active')) {
+        mobileMenuIcon.classList.remove('fa-bars');
+        mobileMenuIcon.classList.add('fa-times');
+    } else {
+        mobileMenuIcon.classList.remove('fa-times');
+        mobileMenuIcon.classList.add('fa-bars');
+    }
+});
+
+// Close mobile menu when clicking on a link
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        mobileMenu.classList.remove('active');
+        mobileMenuIcon.classList.remove('fa-times');
+        mobileMenuIcon.classList.add('fa-bars');
+    });
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
+    });
+});
 
-        themeToggle.addEventListener('click', function () {
-            body.classList.toggle('dark-theme');
+// Add scroll effect to navigation
+window.addEventListener('scroll', function () {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 100) {
+        nav.style.backgroundColor = 'rgba(45, 45, 45, 0.85)';
+        nav.style.backdropFilter = 'blur(10px)';
+    } else {
+        nav.style.backgroundColor = '#2d2d2d';
+        nav.style.backdropFilter = 'none';
+    }
+});
 
-            if (body.classList.contains('dark-theme')) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'light');
-            }
-        });
+// Initialize Advanced Scroll Animations
+document.querySelectorAll('.section-title').forEach(el => el.setAttribute('data-aos', 'fade-up'));
+document.querySelectorAll('.skill-category').forEach((el, index) => {
+    el.setAttribute('data-aos', 'fade-up');
+    el.setAttribute('data-aos-delay', (index * 100).toString());
+});
+document.querySelectorAll('.project-card').forEach((el, index) => {
+    el.setAttribute('data-aos', 'fade-up');
+    el.setAttribute('data-aos-delay', (index * 100).toString());
+});
 
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuIcon = mobileMenuToggle.querySelector('i');
+const heroText = document.querySelector('.hero-text');
+if (heroText) heroText.setAttribute('data-aos', 'fade-right');
 
-        mobileMenuToggle.addEventListener('click', function () {
-            mobileMenu.classList.toggle('active');
-            if (mobileMenu.classList.contains('active')) {
-                mobileMenuIcon.classList.remove('fa-bars');
-                mobileMenuIcon.classList.add('fa-times');
-            } else {
-                mobileMenuIcon.classList.remove('fa-times');
-                mobileMenuIcon.classList.add('fa-bars');
-            }
-        });
+const heroImage = document.querySelector('.hero-image');
+if (heroImage) {
+    heroImage.setAttribute('data-aos', 'zoom-in');
+    heroImage.setAttribute('data-aos-delay', '200');
+}
 
-        // Close mobile menu when clicking on a link
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                mobileMenu.classList.remove('active');
-                mobileMenuIcon.classList.remove('fa-times');
-                mobileMenuIcon.classList.add('fa-bars');
-            });
-        });
+const aboutText = document.querySelector('.about-text');
+if (aboutText) aboutText.setAttribute('data-aos', 'fade-up');
 
-        // Typing animation
-        const phrases = [
-            "Data Science & Machine Learning Enthusiast",
-            "AI Student & Problem Solver",
-            "Tech Explorer",
-        ];
+document.querySelectorAll('.education-card').forEach(el => el.setAttribute('data-aos', 'fade-up'));
 
-        let currentPhrase = 0;
-        let currentChar = 0;
-        let isDeleting = false;
-        const typewriterElement = document.getElementById('typewriter');
-
-        function typeWriter() {
-            const currentText = phrases[currentPhrase];
-
-            if (isDeleting) {
-                typewriterElement.textContent = currentText.substring(0, currentChar - 1);
-                currentChar--;
-            } else {
-                typewriterElement.textContent = currentText.substring(0, currentChar + 1);
-                currentChar++;
-            }
-
-            let typeSpeed = isDeleting ? 50 : 100;
-
-            if (!isDeleting && currentChar === currentText.length) {
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && currentChar === 0) {
-                isDeleting = false;
-                currentPhrase = (currentPhrase + 1) % phrases.length;
-                typeSpeed = 500;
-            }
-
-            setTimeout(typeWriter, typeSpeed);
-        }
-
-        // Start typing animation after loading
-        setTimeout(typeWriter, 1500);
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Modified scroll effect
-        window.addEventListener('scroll', function () {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                if (!body.classList.contains('dark-theme')) {
-                    nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                }
-                nav.style.backdropFilter = 'blur(10px)';
-            } else {
-                if (!body.classList.contains('dark-theme')) {
-                    nav.style.backgroundColor = '#fff';
-                } else {
-                    nav.style.backgroundColor = '#2d2d2d';
-                }
-                nav.style.backdropFilter = 'none';
-            }
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.skill-category, .education-card, .contact-item, .learning-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
+AOS.init({
+    duration: 800,
+    once: false,
+    offset: 100
+});
