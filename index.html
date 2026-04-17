@@ -6,31 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arpit Jat - Data Science & Machine Learning</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="dark-theme">
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loader"></div>
     </div>
 
-    <!-- Navigation - Updated Layout -->
+    <!-- Navigation -->
     <nav>
         <div class="container">
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </button>
+            <div class="logo">Arpit Jat</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#learning">Learning</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
                 <i class="fas fa-bars"></i>
@@ -40,10 +36,9 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#learning">Learning</a></li>
-                    <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -51,11 +46,19 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="particles" id="particles"></div>
-        <div class="container">
-            <h1>Arpit Jat</h1>
-            <p class="subtitle" id="typewriter"></p>
-            <a href="#contact" class="cta-button">Get In Touch</a>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Hello!, I'm Arpit Jat</h1>
+                <p class="subtitle">Data Science & Machine Learning Enthusiast</p>
+                <p class="description">Specializing in Artificial Intelligence and Building AI Solutions.</p>
+                <div class="hero-buttons">
+                    <a href="#footer" class="cta-button">Get In Touch</a>
+                    <a href="#projects" class="cta-button">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile_pic.png" alt="Arpit Jat" class="profile-photo">
+            </div>
         </div>
     </section>
 
@@ -64,15 +67,9 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-image">
-                    <div class="profile-placeholder">
-                    <img src="profile_pic.png" alt="" class="profile-photo">
-                    </div>
-                </div>
-                
                 <div class="about-text">
-                   
-                    <p>Hello! I'm Arpit Jat, a passionate Computer Science student specializing in Artificial
+
+                    <p>A passionate Computer Science student specializing in Artificial
                         Intelligence at Poornima College of Engineering. Currently pursuing my BTech degree (2024-2028),
                         I'm deeply fascinated by the world of Data Science and Machine Learning.</p>
                     <p>My journey in technology is driven by curiosity and the desire to solve real-world problems using
@@ -94,15 +91,25 @@
                     <i class="fas fa-code"></i>
                     <h3>Programming Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">C Programming</span>
+                        <span class="skill-tag">C/C++</span>
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Html</span>
-                        <span class="skill-tag">Css</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
                     </div>
                 </div>
 
-            
+                <div class="skill-category">
+                    <i class="fas fa-brain"></i>
+                    <h3>Data Science & ML</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Statistical Analysis</span>
+                    </div>
+                </div>
 
                 <div class="skill-category">
                     <i class="fas fa-tools"></i>
@@ -110,49 +117,53 @@
                     <div class="skill-tags">
                         <span class="skill-tag">DBMS</span>
                         <span class="skill-tag">DSA</span>
-                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Jupyter</span>
                         <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Git</span>
 
 
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <i class="fas fa-lightbulb"></i>
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Team Management</span>
-                        <span class="skill-tag">Communication</span>
-                        <span class="skill-tag">Logical Thinking</span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Currently Learning Section -->
-    <section id="learning" class="currently-learning">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
-            <div class="learning-content">
-                <h2 class="section-title">Currently Learning</h2>
-                <p>Continuously expanding my knowledge in cutting-edge technologies</p>
-                <div class="learning-items">
-                    <div class="learning-item">
-                        <i class="fas fa-robot"></i>
-                        <h4>Deep Learning</h4>
-                        <p>Neural networks, TensorFlow, and advanced AI models</p>
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-wallet"></i></div>
+                    <h3>Expense Splitter</h3>
+                    <p>A web-based application managing shared expenses among groups. Create trips, track individual
+                        spending, and automatically calculate the optimal settlements utilizing Firebase backend.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Firebase</span>
+                        <span class="project-tag">HTML/CSS</span>
                     </div>
-                    <div class="learning-item">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>Advanced Analytics</h4>
-                        <p>Time series analysis, predictive modeling</p>
+                    <div class="project-links" style="margin-top: 1rem;">
+                        <a href="expense-splitter.html">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="learning-item">
-                        <i class="fas fa-comments"></i>
-                        <h4>Natural Language Processing</h4>
-                        <p>Text analysis, sentiment analysis, language models</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Student Performance Analysis</h3>
+                    <p>Exploratory data analysis identifying trends in student performance. Built predictive models
+                        utilizing historical grade data to forecast outcomes and highlight improvement areas.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Pandas</span>
+                        <span class="project-tag">Machine Learning</span>
+                    </div>
+                    <div class="project-links" style="margin-top: 1rem;">
+                        <a href="student-performance.html">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -164,93 +175,29 @@
         <div class="container">
             <h2 class="section-title">Education</h2>
             <div class="education-card">
-                <h3>Bachelor of Technology - Artificial Intelligence</h3>
+                <h3>Bachelor of Technology in Artificial Intelligence</h3>
                 <p class="institution">Poornima College of Engineering</p>
                 <p class="duration">2024 - 2028</p>
-                <p class="duration">CGPA - 7.53</p>
                 <p>Currently pursuing BTech in AI, focusing on machine learning, data science, algorithms, and
                     artificial intelligence applications. Building a strong foundation in mathematics, programming, and
                     computational thinking.</p>
-            </div>
-              <div class="education-card">
-                <h3>High School - Science</h3>
-                <p class="institution">DAV HZL Sr Sec School</p>
-                <p class="duration">2023 - 2024</p>
-                <p class="duration">Percentage - 71.4%</p>
-                <p>Completed 12th grade under the CBSE board with Physics, Chemistry, and Mathematics.
-                    Gained a solid foundation in core science subjects, which guided me toward pursuing engineering.</p>
-            </div>
-        </div>
-    </section>
-
-    
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="coming-soon">
-                <i class="fas fa-rocket"></i>
-                <h3>Exciting Projects Coming Soon!</h3>
-                <p>I'm currently working on several data science and machine learning projects that will showcase my
-                    skills and passion for AI. Check back soon to see my latest work in action, including data analysis,
-                    predictive modeling, and innovative AI solutions.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <a href="mailto:arpitjat1903@gmail.com">arpitjat1903@gmail.com</a>
-                    </div>
-                </div>
-              
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <div>
-                        <h4>LinkedIn</h4>
-                        <a href="https://www.linkedin.com/in/arpit-jat/" target="_blank">linkedin.com/in/arpit-jat</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <div>
-                        <h4>GitHub</h4>
-                        <a href="https://github.com/arpitjat07" target="_blank">github.com/arpitjat07</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-code"></i>
-                    <div>
-                        <h4>LeetCode</h4>
-                        <a href="https://leetcode.com/u/Obux15uf4h/" target="_blank">leetcode.com/u/Obux15uf4h/</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/arpit-jat/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/arpitjat07" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:arpitjat1903@gmail.com"  target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:arpitjat1903@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
             <p>&copy; 2025 Arpit Jat. All rights reserved.</p>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-
 </body>
 
 </html>
