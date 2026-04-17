@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Analysis - Arpit Jat</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-detail {
+            padding: 150px 0 100px;
+        }
+
+        .project-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .project-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #2d2d2d;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .project-content h2 {
+            color: #64b5f6;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            color: #b0b0b0;
+        }
+
+        .project-content p {
+            color: #b0b0b0;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .button-group {
+            margin-top: 3rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .button-group a {
+                margin-left: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark-theme">
+    <nav>
+        <div class="container">
+            <div class="logo">Arpit Jat</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#footer">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#footer">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-header" data-aos="fade-up">
+                <h1 class="section-title">Student Performance Analysis</h1>
+                <p style="color:#b0b0b0; font-size:1.1rem; max-width:600px; margin:0 auto;">Exploratory data analysis
+                    identifying trends in student performance and building predictive models.</p>
+            </div>
+
+            <div class="project-content" data-aos="fade-up" data-aos-delay="100">
+                <h2>Project Overview</h2>
+                <p>The Student Performance Data Exploration project takes a deep dive into visualizing and understanding
+                    the various socio-economic, environmental, and academic factors that directly influence secondary
+                    education outcomes. By employing robust data science workflows, this project uncovers actionable
+                    insights and models potential future outcomes based on historical records.</p>
+
+                <h2>Key Features & Methodology</h2>
+                <p>The methodology relies strictly on rigorous statistical analysis and predictive modeling paradigms:
+                </p>
+                <ul>
+                    <li><strong>Exploratory Data Analysis (EDA):</strong> Uncovered hidden trends across multivariate
+                        databases. Cleaned and preprocessed fragmented datasets to build a solid foundation.</li>
+                    <li><strong>Data Visualization:</strong> Leveraged advanced graphing libraries to illustrate the
+                        correlation between study time, extracurricular activities, test scores, and attendance rates
+                        dynamically.</li>
+                    <li><strong>Predictive Modeling:</strong> Implemented robust machine learning regression models
+                        utilizing Scikit-learn to accurately predict future student grades depending on baseline
+                        metrics.</li>
+                    <li><strong>Feature Engineering:</strong> Selected optimal analytical features (demographics, prior
+                        grades, study environments) that maximize the model's accuracy while minimizing algorithmic
+                        bias.</li>
+                </ul>
+
+                <h2>Technology Stack</h2>
+                <ul>
+                    <li><strong>Languages:</strong> Python 3.</li>
+                    <li><strong>Data Processing:</strong> Pandas and NumPy for complex dataframe transformations and
+                        multi-dimensional matrices calculation.</li>
+                    <li><strong>Machine Learning:</strong> Scikit-learn for regressions, data splitting, and model
+                        validation.</li>
+                    <li><strong>Environment:</strong> Jupyter Notebooks for interactive data exploration and
+                        documentation blending.</li>
+                </ul>
+
+                <div class="button-group">
+                    <a href="javascript:void(0)" class="cta-button" onclick="alert('Project link coming soon!')">View
+                        Live Project</a>
+                    <a href="index.html#projects" class="cta-button"
+                        style="background:transparent; border:2px solid #3498db; color:#e0e0e0;">Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/arpit-jat/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/arpitjat07" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:arpitjat1903@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Arpit Jat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
